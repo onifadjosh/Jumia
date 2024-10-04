@@ -6,6 +6,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 require('dotenv').config()
 const productRoute = require('./routes/product.route')
+const userRoute = require('./routes/user.route')
 const mongoose = require("mongoose")
 
 
@@ -22,6 +23,7 @@ mongoose.connect(URI)
 
 
 app.use('/product', productRoute)
+app.use('/account', userRoute)
 
 
 app.get('/', (req,res)=>{

@@ -7,4 +7,4 @@ route.post('/add-product', addProduct)
 route.get("/all-product", allProduct)
 
 
-module.exports =  route
+module.exports =  route;
